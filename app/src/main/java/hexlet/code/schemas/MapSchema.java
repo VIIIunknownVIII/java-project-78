@@ -13,6 +13,11 @@ public class MapSchema extends BaseSchema<Map<String, Object>> {
         return this;
     }
 
+    public MapSchema sizeof(int size) {
+        addCheck(map -> map != null && map.size() == size);
+        return this;
+    }
+
     public MapSchema shape(Map<String, BaseSchema<?>> schemas) {
         shapeSchemas.putAll(schemas);
         addCheck(map -> map != null && validateShape(map));
@@ -25,7 +30,7 @@ public class MapSchema extends BaseSchema<Map<String, Object>> {
             BaseSchema<?> schema = entry.getValue();
             if (map.containsKey(key)) {
                 Object value = map.get(key);
-                if (!schema.isValid(value)) { // Проблема может быть в том, что метод isValid возвращает неожиданный результат
+                if (!schema.isValid(value)) {
                     return false;
                 }
             }
