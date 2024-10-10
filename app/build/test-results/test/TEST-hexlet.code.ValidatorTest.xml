@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.ValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-10T11:34:47" hostname="gg-ms7e28" time="0.01">
+<testsuite name="hexlet.code.ValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-10T11:39:41" hostname="gg-ms7e28" time="0.012">
   <properties/>
-  <testcase name="testMapSchemaWithShape()" classname="hexlet.code.ValidatorTest" time="0.01"/>
+  <testcase name="testMapSchemaWithShape()" classname="hexlet.code.ValidatorTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
