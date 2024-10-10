@@ -35,8 +35,8 @@ class ValidatorTest {
 
         schema.shape(schemas);
 
-        assertTrue(schema.isValid(human1));  // Ожидаем true
-        assertFalse(schema.isValid(human2)); // Ожидаем false (lastName = null)
-        assertFalse(schema.isValid(human3)); // Ожидаем false (lastName слишком короткая)
+        assertTrue(schema.isValid(human1));
+        assertFalse(schema.isValid(human2));
+        assertFalse(schema.isValid(human3));
     }
 }
