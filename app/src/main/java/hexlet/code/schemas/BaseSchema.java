@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 public abstract class BaseSchema<T> {
     private final List<Predicate<T>> checks = new ArrayList<>();
     private boolean isRequired = false;
-    
+
     public BaseSchema<T> required() {
         isRequired = true;
         checks.add(value -> value != null);
@@ -26,7 +26,7 @@ public abstract class BaseSchema<T> {
         try {
             return checks.stream().allMatch(check -> check.test((T) value));
         } catch (ClassCastException e) {
-            return false; // Если произошла ошибка приведения типов, возвращаем false
+            return false;
         }
     }
 }
