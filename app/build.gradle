@@ -36,3 +36,8 @@ jacocoTestReport {
        // html.enabled = true
     }
 }
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xdiags:verbose'
+}
+
