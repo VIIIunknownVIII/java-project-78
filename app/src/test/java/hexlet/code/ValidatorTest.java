@@ -29,7 +29,7 @@ class ValidatorTest {
         human3.put("firstName", "Anna");
         human3.put("lastName", "B");
 
-        Map<String, BaseSchema<? extends Object>> schemas = new HashMap<>();
+        Map<String, BaseSchema<?>> schemas = new HashMap<>();
         schemas.put("firstName", v.string().required());
         schemas.put("lastName", v.string().required().minLength(2));
 
