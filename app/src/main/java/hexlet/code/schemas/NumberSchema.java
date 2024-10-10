@@ -1,10 +1,7 @@
 package hexlet.code.schemas;
 
 public final class NumberSchema extends BaseSchema<Integer> {
-
-    public NumberSchema() {
-        // Конструктор по умолчанию
-    }
+    public NumberSchema() { }
 
     public NumberSchema required() {
         setRequired();
@@ -14,7 +11,7 @@ public final class NumberSchema extends BaseSchema<Integer> {
     public NumberSchema positive() {
         addCheck(
                 "positive",
-                value -> value == null || value > 0
+                value -> value > 0
         );
         return this;
     }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.ValidatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-10-10T13:21:25" hostname="gg-ms7e28" time="0.022">
+<testsuite name="hexlet.code.ValidatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-10-10T13:29:04" hostname="gg-ms7e28" time="0.017">
   <properties/>
-  <testcase name="testNumberShapeSchemas()" classname="hexlet.code.ValidatorTest" time="0.014"/>
+  <testcase name="testNumberShapeSchemas()" classname="hexlet.code.ValidatorTest" time="0.011"/>
   <testcase name="testMixedShapeSchemas()" classname="hexlet.code.ValidatorTest" time="0.001"/>
   <testcase name="testStringShapeSchemas()" classname="hexlet.code.ValidatorTest" time="0.001"/>
   <testcase name="testStringSchema()" classname="hexlet.code.ValidatorTest" time="0.001"/>
-  <testcase name="testMapSchema()" classname="hexlet.code.ValidatorTest" time="0.001"/>
-  <testcase name="testNumberSchema()" classname="hexlet.code.ValidatorTest" time="0.001"/>
+  <testcase name="testMapSchema()" classname="hexlet.code.ValidatorTest" time="0.0"/>
+  <testcase name="testNumberSchema()" classname="hexlet.code.ValidatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
