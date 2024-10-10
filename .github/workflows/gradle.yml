@@ -16,4 +16,5 @@ jobs:
           java-version: '21'
 
       - name: Build with Gradle
+        working-directory: java-project-78/app
         run: ./gradlew build
