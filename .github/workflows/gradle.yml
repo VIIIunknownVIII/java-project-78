@@ -15,8 +15,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Navigate to project directory
-        working-directory: java-project-78/app
-
       - name: Build with Gradle
         run: ./gradlew build
