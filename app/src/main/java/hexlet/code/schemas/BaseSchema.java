@@ -1,33 +1,36 @@
 package hexlet.code.schemas;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.function.Predicate;
 
 public abstract class BaseSchema<T> {
-    private final List<Predicate<T>> checks = new ArrayList<>();
-    private boolean isRequired = false;
+    protected Map<String, Predicate<T>> checks = new LinkedHashMap<>();
+    protected boolean isRequired = false;
 
-    public BaseSchema<T> required() {
+    protected final void addCheck(String name, Predicate<T> validate) {
+        checks.put(name, validate);
+    }
+    protected final void setRequired() {
         isRequired = true;
-        checks.add(value -> value != null);
-        return this;
     }
 
-    protected void addCheck(Predicate<T> predicate) {
-        checks.add(predicate);
-    }
-
-    @SuppressWarnings("unchecked")
-    public boolean isValid(Object value) {
-        if (!isRequired && value == null) {
+    public final boolean isValid(T value) {
+        if (!isRequired) {
             return true;
         }
-        try {
-            return checks.stream().allMatch(check -> check.test((T) value));
-        } catch (ClassCastException e) {
+
+        if (value == null) {
             return false;
         }
+
+        for (String key : checks.keySet()) {
+            Predicate<T> check = checks.get(key);
+            if (!check.test(value)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
-
