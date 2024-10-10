@@ -41,3 +41,7 @@ tasks.withType(JavaCompile) {
     options.compilerArgs << '-Xdiags:verbose'
 }
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+}
+
